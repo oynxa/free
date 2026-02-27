@@ -343,6 +343,37 @@ outline: none;
 text-align: center;
 background-color: rgb(27, 137, 4);
 }</style>
+<style>
+        .loading-gif {
+            max-width: 500px;
+        }
+
+        .pre-loader {
+            position: fixed;
+            z-index: 100; /** make sure this is the highest value compared to all other divs **/
+            top: 0;
+            left: 0;
+            background: #191f26;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .pre-loader.hidden {
+            animation: fadeOut 5s; /** change to 1s */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+    
     <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfBb0TwxpSzqqatr62NGBxMoMnFRvSr6Gmon2SVxaRRq24NxkdSHGhsqHh3Y5d811BMAReW_B5y3pwDAVXybXFDRnHMFLpqpd-2cuDAa4sqlNrWh6wZZ5E-OCw_hyq0JQ4QDd-7TjQjvZ1QoY2NOyPbQmmUaxccLlUpvBbftnWnw96lwLbLEzjpdcvnH6F/s320/1000228549.jpg" alt="Free-Data" style="width: 100%;">
     </center>
 
@@ -367,7 +398,10 @@ background-color: rgb(27, 137, 4);
 
             <p class="welcome">
                
-
+<body>
+    <div class='pre-loader'>
+    <img class='loading-gif' alt='loading' src="https://www.pinterest.com/pin/633107660137722243/"/>
+</div>
 
  <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi97qupTSP9ynXtleZLLM_EJzZId4VvmhHIUKipM11hJekCu_qtZ9RaRh3TTZEf_6-ptYpEXEWRWIR0D0JlfP4lAg-kbb3ecB917H4Rky0nBjw_Zy_9SgWLTHZiUfXr1uS6TAx31tth2ogYgs23s8twaX7x0My_dt4Ti22m6ozSn6s3mo6uO1fPTdno7EGG/s320/1000228569.jpg" alt="Free-Data" style="width: 25%;">
     </center>
@@ -658,6 +692,11 @@ $(document).click(function () {
 </script>
 
 
+<script type='text/javascript'>
+    window.addEventListener('load', function () {
+        document.querySelector('.pre-loader').className += ' hidden';
+    });
+</script>
 
 
 
